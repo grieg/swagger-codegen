@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
@@ -16,6 +17,8 @@ namespace IO.Swagger.Model
     [DataContract]
     public class Tag :  IEquatable<Tag>
     {
+        
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="Tag" /> class.
         /// </summary>

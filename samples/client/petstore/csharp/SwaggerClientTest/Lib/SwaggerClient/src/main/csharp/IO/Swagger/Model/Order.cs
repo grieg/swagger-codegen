@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
@@ -16,6 +17,24 @@ namespace IO.Swagger.Model
     [DataContract]
     public class Order :  IEquatable<Order>
     {
+        
+        /// <summary>
+        /// Order Status
+        /// <summary>
+        public enum StatusEnum {
+            
+            
+            [DataMember(Name="placed")]
+            Placed,
+            
+            [DataMember(Name="approved")]
+            Approved,
+            
+            [DataMember(Name="delivered")]
+            Delivered,
+            
+        }
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="Order" /> class.
         /// </summary>

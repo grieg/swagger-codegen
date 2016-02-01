@@ -19,6 +19,10 @@ namespace {{packageName}}.Model
     [DataContract]
     public class {{classname}} : {{#parent}}{{{parent}}}, {{/parent}} IEquatable<{{classname}}>
     {
+        {{#vars}}{{#isEnum}}
+{{>enumClass}}{{/isEnum}}{{#items.isEnum}}{{#items}}
+{{>enumClass}}{{/items}}{{/items.isEnum}}{{/vars}}
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="{{classname}}" /> class.
         /// </summary>

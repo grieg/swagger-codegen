@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
@@ -16,6 +17,24 @@ namespace IO.Swagger.Model
     [DataContract]
     public class Pet :  IEquatable<Pet>
     {
+        
+        /// <summary>
+        /// pet status in the store
+        /// <summary>
+        public enum StatusEnum {
+            
+            
+            [DataMember(Name="available")]
+            Available,
+            
+            [DataMember(Name="pending")]
+            Pending,
+            
+            [DataMember(Name="sold")]
+            Sold,
+            
+        }
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="Pet" /> class.
         /// </summary>

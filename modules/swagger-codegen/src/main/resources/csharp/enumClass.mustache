@@ -1,0 +1,10 @@
+        /// <summary>
+        /// {{#description}}{{{description}}}{{/description}}
+        /// <summary>
+        public enum {{{datatypeWithEnum}}} {
+            
+            {{#allowableValues}}{{#enumVars}}
+            [DataMember(Name="{{value}}")]
+            {{{name}}},
+            {{/enumVars}}{{/allowableValues}}
+        }
